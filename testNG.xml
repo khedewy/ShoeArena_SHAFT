@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                </methods>
+            </class>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="searchForProducts" />
+                    <include name="addProductToCart" />
+                </methods>
+            </class>
+            <class name="tests.CheckoutTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="searchForProducts" />
+                    <include name="addProductToCart" />
+                    <include name="navigateToCheckOutPage"/>
+                    <include name="enterUserData"/>
+                    <include name="chosePaymentMethode"/>
+                </methods>
+            </class>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="logout"/>
+                    <include name="navigateToLoginPage"/>
+                    <include name="enterLoginData"/>
+                </methods>
+            </class>
+
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="searchForProducts" />
+                </methods>
+            </class>
+            <class name="tests.ContactUsTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="navigateToContactUsPage"/>
+                    <include name="contactUs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
